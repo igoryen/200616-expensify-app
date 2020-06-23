@@ -4,7 +4,7 @@ import { createStore } from 'redux';
 
 const incrementCount = ({incrementBy = 1} = {}) => ({
     type: 'INCREMENT',
-    incrementBy: incrementBy
+    incrementBy
 });
 
 const store = createStore((state = { count: 0 }, action ) => {
