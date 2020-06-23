@@ -1,8 +1,9 @@
 const path = require('path');
 
 module.exports = {
-    // entry: './src/app.js', // The entry point of the app = where the app kicks off
-    entry: './src/playground/redux-101.js', // The entry point of the app = where the app kicks off
+    // entry: './src/app.js', // entry: The entry point of the app = where the app kicks off
+    // entry: './src/playground/redux-101.js', 
+    entry: './src/playground/destructuring.js',
     output: {
         path: path.join(__dirname, 'public'), // absolute path + /public
         filename: 'bundle.js'
