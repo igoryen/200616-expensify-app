@@ -83,8 +83,6 @@ const expenseTwo = store.dispatch( addExpense({ description: 'Coffee', amount: 3
 
 store.dispatch(removeExpense( {id: expenseOne.expense.id}));
 
-console.log(expenseOne);
-
 const demoState = {
     expenses: [{
         id: 'flkjsdflkj',
@@ -100,3 +98,14 @@ const demoState = {
         endDate: undefined
     }
 };
+
+const user = {
+    name: 'Jen',
+    age: 24
+};
+
+console.log({
+    ...user,
+    location: 'Philadelphia',
+    age: 27
+});
