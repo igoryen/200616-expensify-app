@@ -1,17 +1,10 @@
 import { createStore } from 'redux';
 
 // Action generators
-//======================================
-const add = ({a, b}, c) => {
-    return a + b + c;
-};
-console.log(add({a: 1, b:12}, 100));
-//======================================
 
-
-const incrementCount = (payload = {}) => ({
+const incrementCount = ({incrementBy} = {}) => ({
     type: 'INCREMENT',
-    incrementBy: typeof payload.incrementBy === 'number' ? payload.incrementBy : 1
+    incrementBy: typeof incrementBy === 'number' ? incrementBy : 1
 });
 
 const store = createStore((state = { count: 0 }, action ) => {
