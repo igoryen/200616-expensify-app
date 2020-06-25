@@ -8,10 +8,11 @@ const ExpenseList = (props) => (
     </div>
 );
 
-const ConnectedExpenseList = connect( (state) => {
+// map storeState to comp props
+const mapStateToProps = (state) => {
     return {
         expenses: state.expenses
     };
-} )(ExpenseList);
+};
 
-export default ConnectedExpenseList;
+export default connect( mapStateToProps )(ExpenseList);
