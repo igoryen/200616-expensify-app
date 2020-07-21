@@ -31,3 +31,8 @@ chrome-user-data
 *.sublime-workspace
 .idea
 *.iml
+
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map
