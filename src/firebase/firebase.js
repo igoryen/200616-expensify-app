@@ -28,3 +28,4 @@ database.ref().set({
 // database.ref().set('This is my data.');
 
 database.ref('age').set(46);
+database.ref('location/city').set('Toronto');
