@@ -31,7 +31,9 @@ database.ref().set({
 
 database.ref().update({
     name: 'Mike',
-    age: 29
+    age: 29,
+    job: 'Software developer',
+    isSingle: null
 });
 
 // const everything = database.ref();
