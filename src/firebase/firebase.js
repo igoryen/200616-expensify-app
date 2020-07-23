@@ -27,6 +27,4 @@ database.ref().set({
 
 // database.ref().set('This is my data.');
 
-database.ref().set({
-    age: 46
-});
+database.ref('age').set(46);
