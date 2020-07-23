@@ -29,3 +29,7 @@ database.ref().set({
 
 database.ref('age').set(46);
 database.ref('location/city').set('Toronto');
+database.ref('attributes').set({
+    height: 193,
+    weight: 90
+});
