@@ -15,7 +15,7 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-database.ref()
+database.ref('location/city')
     .once('value')
     .then((snapshot) => {
         const val = snapshot.val();
