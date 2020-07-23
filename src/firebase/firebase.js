@@ -13,7 +13,9 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-firebase.database().ref().set({
+const database = firebase.database();
+
+database.ref().set({
     name: 'Igor Entaltsev',
     age: 45,
     isSingle: false,
@@ -22,3 +24,5 @@ firebase.database().ref().set({
         country: 'Canada'
     }
 });
+
+database.ref().set('This is my data.');
