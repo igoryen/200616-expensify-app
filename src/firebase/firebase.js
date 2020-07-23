@@ -15,29 +15,25 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-database.ref().set({
-    name: 'Igor Entaltsev',
-    age: 46,
-    isSingle: false,
-    location: {
-        city: 'North York',
-        country: 'Canada'
-    }
-}).then(() => {
-    console.log('Data is saved.')
-}).catch((error) => {
-    console.log('This failed.', error)
-});
+// database.ref().set({
+//     name: 'Igor Entaltsev',
+//     age: 46,
+//     isSingle: false,
+//     location: {
+//         city: 'North York',
+//         country: 'Canada'
+//     }
+// }).then(() => {
+//     console.log('Data is saved.')
+// }).catch((error) => {
+//     console.log('This failed.', error)
+// });
 
-// database.ref().set('This is my data.');
-
-// database.ref('age').set(46);
-// database.ref('location/city').set('Toronto');
-database.ref('attributes').set({
-    height: 193,
-    weight: 90
-}).then(() => {
-    console.log('Second call worked.')
-}).catch((e) => {
-    console.log('Things didnt work for the second error', e)
-});
+const isSingleRef = database.ref('isSingle');
+isSingleRef.remove()
+    .then(() =>  {
+        console.log("Data was removed.")
+    })
+    .catch((error) => {
+        console.log("Did not remove data: " + error.message)
+    });
