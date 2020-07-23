@@ -29,7 +29,10 @@ database.ref().set({
     console.log('This failed.', error)
 });
 
-database.ref('isSingle').set(null);
+database.ref().update({
+    name: 'Mike',
+    age: 29
+});
 
 // const everything = database.ref();
 // everything.remove()
