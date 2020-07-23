@@ -17,12 +17,16 @@ const database = firebase.database();
 
 database.ref().set({
     name: 'Igor Entaltsev',
-    age: 45,
+    age: 46,
     isSingle: false,
     location: {
         city: 'North York',
         country: 'Canada'
     }
+}).then(() => {
+    console.log('Data is saved.')
+}).catch((error) => {
+    console.log('This failed.', error)
 });
 
 // database.ref().set('This is my data.');
