@@ -31,9 +31,13 @@ database.ref().set({
 
 // database.ref().set('This is my data.');
 
-database.ref('age').set(46);
-database.ref('location/city').set('Toronto');
+// database.ref('age').set(46);
+// database.ref('location/city').set('Toronto');
 database.ref('attributes').set({
     height: 193,
     weight: 90
+}).then(() => {
+    console.log('Second call worked.')
+}).catch((e) => {
+    console.log('Things didnt work for the second error', e)
 });
