@@ -15,16 +15,17 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-database.ref().on('value', (snapshot) => {
+const onValueChange = (snapshot) => {
     console.log(snapshot.val());
-});
+};
+database.ref().on('value', onValueChange);
 
 setTimeout(() => {
     database.ref('age').set(48)
 }, 3500);
 
 setTimeout(() => {
-    database.ref().off()
+    database.ref().off(onValueChange);
 }, 7000);
 
 setTimeout(() => {
