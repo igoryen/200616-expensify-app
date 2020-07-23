@@ -15,29 +15,39 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-database.ref().set({
-    name: 'Igor Entaltsev',
-    age: 46,
-    stressLevel: 6,
-    job: {
-        title: 'Software developer',
-        company: 'Google'
-    },
-    location: {
-        city: 'North York',
-        country: 'Canada'
-    }
-}).then(() => {
-    console.log('Data is saved.')
-}).catch((error) => {
-    console.log('This failed.', error)
-});
+database.ref()
+    .once('value')
+    .then((snapshot) => {
+        const val = snapshot.val();
+        console.log('val: ', val);
+    })
+    .catch((e) => {
+        console.log('Error fetching data', e)
+    });
 
-database.ref().update({
-    stressLevel: 9,
-    'job/company': 'Amazon',
-    'location/city': 'Seattle'
-});
+// database.ref().set({
+//     name: 'Igor Entaltsev',
+//     age: 46,
+//     stressLevel: 6,
+//     job: {
+//         title: 'Software developer',
+//         company: 'Google'
+//     },
+//     location: {
+//         city: 'North York',
+//         country: 'Canada'
+//     }
+// }).then(() => {
+//     console.log('Data is saved.')
+// }).catch((error) => {
+//     console.log('This failed.', error)
+// });
+
+// database.ref().update({
+//     stressLevel: 9,
+//     'job/company': 'Amazon',
+//     'location/city': 'Seattle'
+// });
 
 // const everything = database.ref();
 // everything.remove()
