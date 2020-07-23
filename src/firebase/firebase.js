@@ -18,7 +18,11 @@ const database = firebase.database();
 database.ref().set({
     name: 'Igor Entaltsev',
     age: 46,
-    job: 'Software developer',
+    stressLevel: 6,
+    job: {
+        title: 'Software developer',
+        company: 'Google'
+    },
     location: {
         city: 'North York',
         country: 'Canada'
@@ -30,8 +34,9 @@ database.ref().set({
 });
 
 database.ref().update({
-    job: 'Manager',
-    'location/city': 'North York'
+    stressLevel: 9,
+    'job/company': 'Amazon',
+    'location/city': 'Seattle'
 });
 
 // const everything = database.ref();
