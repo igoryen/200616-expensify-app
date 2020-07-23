@@ -18,6 +18,8 @@ const database = firebase.database();
 
 const onValueChange = database.ref().on('value', (snapshot) => {
     console.log(snapshot.val());
+}, (e) => {
+    console.log('Error with data fetching', e)
 });
 
 setTimeout(() => {
