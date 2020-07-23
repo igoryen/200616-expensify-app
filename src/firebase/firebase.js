@@ -15,15 +15,19 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-database.ref('location/city')
-    .once('value')
-    .then((snapshot) => {
-        const val = snapshot.val();
-        console.log('val: ', val);
-    })
-    .catch((e) => {
-        console.log('Error fetching data', e)
-    });
+database.ref().on('value', (snapshot) => {
+    console.log(snapshot.val());
+});
+
+// database.ref('location/city')
+//     .once('value')
+//     .then((snapshot) => {
+//         const val = snapshot.val();
+//         console.log('val: ', val);
+//     })
+//     .catch((e) => {
+//         console.log('Error fetching data', e)
+//     });
 
 // database.ref().set({
 //     name: 'Igor Entaltsev',
