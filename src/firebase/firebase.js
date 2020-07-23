@@ -18,7 +18,7 @@ const database = firebase.database();
 database.ref().set({
     name: 'Igor Entaltsev',
     age: 46,
-    isSingle: false,
+    job: 'Software developer',
     location: {
         city: 'North York',
         country: 'Canada'
@@ -30,10 +30,8 @@ database.ref().set({
 });
 
 database.ref().update({
-    name: 'Mike',
-    age: 29,
-    job: 'Software developer',
-    isSingle: null
+    job: 'Manager',
+    'location/city': 'North York'
 });
 
 // const everything = database.ref();
