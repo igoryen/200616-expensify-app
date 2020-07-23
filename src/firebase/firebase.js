@@ -23,6 +23,14 @@ setTimeout(() => {
     database.ref('age').set(48)
 }, 3500);
 
+setTimeout(() => {
+    database.ref().off()
+}, 7000);
+
+setTimeout(() => {
+    database.ref('age').set(50)
+}, 10500);
+
 // database.ref('location/city')
 //     .once('value')
 //     .then((snapshot) => {
