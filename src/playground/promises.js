@@ -1,6 +1,7 @@
 const promise = new Promise((resolve, reject) => {
     setTimeout(() => {
         resolve('This is my resolved data.');
+        resolve('This is my other resolved data.');
     }, 3000);
 });
 
