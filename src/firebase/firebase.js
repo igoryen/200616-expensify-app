@@ -14,5 +14,11 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 firebase.database().ref().set({
-    name: 'Igor Entaltsev'
+    name: 'Igor Entaltsev',
+    age: 45,
+    isSingle: false,
+    location: {
+        city: 'North York',
+        country: 'Canada'
+    }
 });
