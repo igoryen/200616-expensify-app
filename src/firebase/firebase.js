@@ -16,8 +16,8 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
 database.ref('notes').push({
-    title: 'To Do',
-    body: 'Go for a run'
+    title: 'Course Topics',
+    body: 'React Native, Angular, Python'
 });
 
 // const firebaseNotes = {
