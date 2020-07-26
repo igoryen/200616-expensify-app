@@ -15,26 +15,20 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-database.ref('expenses').push({
-    description: 'Rent',
-    note: '',
-    amount: 109500,
-    createdAt: 976123498763
-});
+database.ref()
+    .once('value')
+    .then((snapshot) => {
+        console.log(snapshot.val());
+    });
 
-database.ref('expenses').push({
-    description: 'Phone bill',
-    note: '',
-    amount: 5900,
-    createdAt: 976123498763
-});
+// database.ref('expenses').push({
+//     description: 'Rent',
+//     note: '',
+//     amount: 109500,
+//     createdAt: 976123498763
+// });
 
-database.ref('expenses').push({
-    description: 'Food',
-    note: '',
-    amount: 1200,
-    createdAt: 976123498763
-});
+
 // database.ref('notes/-MDBOCHLc5L0GUbdVxkL').remove();
 
 // database.ref().on('value', (snapshot) => {
