@@ -15,9 +15,7 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-database.ref('notes/-MDBOCHLc5L0GUbdVxkL').update({
-    body: 'Buy food'
-});
+database.ref('notes/-MDBOCHLc5L0GUbdVxkL').remove();
 
 // database.ref().on('value', (snapshot) => {
 //     const val = snapshot.val();
