@@ -15,7 +15,7 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-database.ref()
+database.ref('expenses')
     .once('value')
     .then((snapshot) => {
         const expenses = [];
