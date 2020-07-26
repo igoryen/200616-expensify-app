@@ -23,6 +23,10 @@ database.ref('expenses').on('child_changed', (snapshot) => {
     console.log(snapshot.key, snapshot.val());
 });
 
+database.ref('expenses').on('child_added', (snapshot) => {
+    console.log(snapshot.key, snapshot.val());
+});
+
 // database.ref('expenses')
 //     .once('value')
 //     .then((snapshot) => {
@@ -51,12 +55,12 @@ database.ref('expenses').on('child_changed', (snapshot) => {
 //     console.log(expenses);
 // });
 
-// database.ref('expenses').push({
-//     description: 'Rent',
-//     note: '',
-//     amount: 109500,
-//     createdAt: 976123498763
-// });
+database.ref('expenses').push({
+    description: 'Rent',
+    note: '',
+    amount: 109500,
+    createdAt: 976123498763
+});
 
 
 // database.ref('notes/-MDBOCHLc5L0GUbdVxkL').remove();
