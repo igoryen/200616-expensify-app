@@ -12,7 +12,12 @@ console.log('before');
 
 promise.then((data) => {
     console.log(data);
-    return 'some data';
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('This is my other promise');
+            // reject('Something went wrong!')
+        }, 3000);
+    });
 }).then((str) => {
     console.log('does this run?', str)
 }).catch((error) => {
