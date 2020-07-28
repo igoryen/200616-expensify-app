@@ -33,3 +33,5 @@ chrome-user-data
 *.iml
 
 public/dist/
+.env.test
+.env.development
