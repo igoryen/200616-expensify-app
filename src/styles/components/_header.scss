@@ -6,6 +6,13 @@
         text-decoration: none;
     }
 
+    &__content {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: $s-size 0;
+    }
+
     h1 {
         margin: 0;
     }
