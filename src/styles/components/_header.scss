@@ -1,0 +1,12 @@
+.header {
+    background: $dark-blue;
+
+    &__title {
+        color: white;
+        text-decoration: none;
+    }
+
+    h1 {
+        margin: 0;
+    }
+}
