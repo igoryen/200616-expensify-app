@@ -15,7 +15,7 @@ module.exports = ( env ) => {
     const CSSExtract = new ExtractTextPlugin('styles.css');
 
     return {
-        entry: './src/app.js', // entry: The entry point of the app = where the app kicks off
+        entry: ['babel-polyfill', './src/app.js'], // entry: The entry point of the app = where the app kicks off
         // entry: './src/playground/redux-101.js', 
         // entry: './src/playground/redux-expensify.js',
         // entry: './src/playground/destructuring.js',
